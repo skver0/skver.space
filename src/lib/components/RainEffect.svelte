@@ -1,9 +1,9 @@
 <script lang="ts">
   import { onDestroy, onMount } from "svelte";
+  import { navigating } from "$app/stores";
 
   let canvas: HTMLCanvasElement;
   let ctx: CanvasRenderingContext2D | null = null;
-
   const raindrops: any[] = [];
   const maxRaindrops = 200;
   const raindropSpeed = 10;
@@ -13,17 +13,22 @@
 
   onMount(() => {
     init();
-    if (typeof window !== undefined)
+    if (typeof window !== undefined) {
       window.addEventListener("resize", () => {
         canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
+        canvas.height = document.body.scrollHeight;
       });
+      window.addEventListener("scroll", () => {
+        canvas.width = window.innerWidth;
+        canvas.height = document.body.scrollHeight;
+      });
+    }
   });
 
   const init = () => {
     ctx = canvas.getContext("2d");
     canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    canvas.height = document.body.scrollHeight;
     if (!ctx) {
       alert("bruh moment detected");
       return;
@@ -56,6 +61,4 @@
   });
 </script>
 
-<div class="absolute inset-0 w-full h-full -z-10">
-  <canvas bind:this={canvas} class="w-full h-full" />
-</div>
+<canvas bind:this={canvas} class="absolute top-0 left-0 -z-10 w-full" />
