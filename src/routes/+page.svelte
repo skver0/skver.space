@@ -56,7 +56,7 @@
       </span>
     </p>
     <p class="pb-0">
-      Intereses of mine include: <br />
+      Interests of mine include: <br />
       - Programming <br />
       - Music <br />
       - Manga <br />
