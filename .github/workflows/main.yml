@@ -25,7 +25,7 @@ jobs:
 
       - name: copy files
         run: |
-          cp -r build /home/skver/build
+          cp -r * /home/skver/site
 
       - name: restart service
         run: |
