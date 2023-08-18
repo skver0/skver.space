@@ -8,8 +8,8 @@
 </script>
 
 <Window
-  class={`flex flex-col h-min transition-all duration-200 overflow-hidden ${
-    isOpen ? "lg:w-44 items-left" : "w-min items-center"
+  class={`flex flex-col flex-none transition-all duration-200 overflow-hidden ${
+    isOpen ? "lg:w-44 items-left" : "items-center"
   } md:w-12 w-min`}
 >
   <span
@@ -24,7 +24,7 @@
       {isOpen ? "menu_open" : "menu"}
     </button>
   </span>
-  <div class="flex sm:flex-col lg:gap-1 gap-3 my-1">
+  <div class="flex sm:flex-col lg:gap-1 gap-3 my-1 flex-none">
     {#key $page.url.pathname}
       <Button
         style="side"
