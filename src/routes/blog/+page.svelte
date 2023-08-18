@@ -18,6 +18,10 @@
       entries = entries.filter((entry) => entry.metadata.tags.includes(tag));
       currentTag = tag;
       isFiltered = true;
+    } else {
+      entries = allEntries;
+      currentTag = "";
+      isFiltered = false;
     }
   };
 
