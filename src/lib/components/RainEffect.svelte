@@ -1,7 +1,5 @@
 <script lang="ts">
   import { onDestroy, onMount } from "svelte";
-  import { navigating } from "$app/stores";
-
   let canvas: HTMLCanvasElement;
   let ctx: CanvasRenderingContext2D | null = null;
   const raindrops: any[] = [];
