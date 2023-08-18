@@ -23,8 +23,9 @@ jobs:
           npm ci
           npm run build
 
-      - name: copy files
+      - name: remove old and copy files
         run: |
+          rm -rf /home/skver/site/*
           cp -r * /home/skver/site
 
       - name: restart service
