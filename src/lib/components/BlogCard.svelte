@@ -11,6 +11,7 @@
       {data.metadata.author} :: {new Date(
         data.metadata.date
       ).toLocaleDateString()}
+      {new Date(data.metadata.date).toLocaleTimeString()}
     </p>
     <div class="flex gap-2">
       {#each data.metadata.tags as tag}

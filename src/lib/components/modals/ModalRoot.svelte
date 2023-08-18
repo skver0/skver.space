@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onDestroy } from "svelte";
-  import { modals } from "../stores/ModalStore";
+  import { modals } from "../../stores/ModalStore";
   import { clickOutside } from "../utils/ClickOutside";
   import { fade, fly } from "svelte/transition";
 

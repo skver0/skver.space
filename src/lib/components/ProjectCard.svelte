@@ -1,6 +1,6 @@
 <script lang="ts">
   import ImageViewerModal from "./modals/ImageViewerModal.svelte";
-  import { modals } from "./stores/ModalStore";
+  import { modals } from "../stores/ModalStore";
 
   export let title: string = "Title";
   export let description: string = "Description";

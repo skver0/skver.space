@@ -1,6 +1,5 @@
 <script lang="ts">
   import { goto } from "$app/navigation";
-  import { page } from "$app/stores";
   import BlogCard from "$lib/components/BlogCard.svelte";
   import Button from "$lib/components/Button.svelte";
   import type { MarkdownData, Metadata } from "$lib/types/MarkdownData";

@@ -16,11 +16,11 @@ h1 {
 }
 
 h2 {
-  @apply font-bold mb-2 pb-1 border-b border-neutral-700 text-lg;
+  @apply font-bold mb-2 pb-1 pt-2 border-b border-neutral-700 text-lg;
 }
 
 h3 {
-  @apply font-bold mb-2 pb-1 text-base;
+  @apply font-bold mb-2 pb-1 pt-2 text-base;
 }
 
 main {

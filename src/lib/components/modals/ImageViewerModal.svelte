@@ -1,6 +1,6 @@
 <script lang="ts">
   import { fly } from "svelte/transition";
-  import { modals } from "../stores/ModalStore";
+  import { modals } from "../../stores/ModalStore";
   import { onDestroy } from "svelte";
   export let images: string[] = [];
 
