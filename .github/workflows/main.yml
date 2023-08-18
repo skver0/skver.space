@@ -1,25 +1,32 @@
-name: build and launch preview
+name: build, deploy and restart service
 
-on: [push]
+on:
+  push:
+    branches:
+      - main
 
 jobs:
-  build:
+  build_deploy_restart:
     runs-on: self-hosted
 
     steps:
-      - name: Checkout code
+      - name: checkout
         uses: actions/checkout@v2
 
-      - name: Set up Node.js
+      - name: node setup
         uses: actions/setup-node@v2
         with:
           node-version: '18'
 
-      - name: Install npm dependencies
-        run: npm ci
+      - name: install packages & build
+        run: |
+          npm ci
+          npm run build
 
-      - name: Build code
-        run: npm run build
+      - name: copy files
+        run: |
+          cp -r build /home/skver/build
 
-      - name: Run preview
-        run: npm run preview
+      - name: restart service
+        run: |
+          sudo systemctl restart site.service
