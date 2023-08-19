@@ -5,7 +5,7 @@
   let generatedStyle = "";
 
   $: style === "side"
-    ? (generatedStyle = `dark:active:text-neutral-500 dark:hover:text-neutral-300 hover:text-neutral-800 duration-200 flex gap-1 items-center ${
+    ? (generatedStyle = `dark:active:text-neutral-500 dark:hover:text-neutral-300 hover:text-neutral-700 active:text-neutral-950 duration-200 flex gap-1 items-center ${
         active
           ? "dark:text-neutral-100 text-neutral-950"
           : "dark:text-neutral-400 text-neutral-500"

@@ -17,7 +17,7 @@
 <Window
   class={`flex flex-col flex-none transition-all duration-200 overflow-hidden ${
     isOpen ? "lg:w-44 items-left" : "items-center"
-  } md:w-12 w-min`}
+  } md:w-[2.6rem] w-min`}
 >
   <div
     class="pb-1 dark:border-b-neutral-700 dark:text-neutral-400 border-b-neutral-400 border-b lg:flex hidden items-center justify-between gap-2"

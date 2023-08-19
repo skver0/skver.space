@@ -1,6 +1,6 @@
 ---
 title: Running an Ace Of Spades server inside a Docker container
-description: My experience with running an Ace Of Spades (piqueserver) server inside a Docker container
+description: My experience with running an Ace Of Spades server inside a Docker container
 author: Károly Sárdi
 tags: ["#aos", "#docker", "#piqueserver"]
 date: 2023-08-18 16:57
