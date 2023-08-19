@@ -15,7 +15,7 @@
 </script>
 
 <div
-  class="flex flex-col gap-2 w-36 h-64 rounded-lg border border-neutral-700 overflow-hidden font-assistant"
+  class="flex flex-col gap-2 w-36 h-64 rounded-lg border dark:border-neutral-700 border-neutral-400 overflow-hidden font-assistant"
 >
   <button on:click={() => modals.push(ImageViewerModal, { images: images })}>
     <img

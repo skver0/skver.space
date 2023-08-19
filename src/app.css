@@ -8,7 +8,7 @@ body {
 }
 
 body {
-  @apply bg-neutral-900 text-neutral-200 font-assistant p-4 flex sm:flex-row flex-col gap-5 w-full max-w-6xl mx-auto;
+  @apply dark:bg-neutral-900 dark:text-neutral-200 bg-neutral-200 text-neutral-700 font-assistant p-4 flex sm:flex-row flex-col gap-5 w-full max-w-6xl mx-auto;
 }
 
 main,
@@ -17,11 +17,11 @@ article {
 }
 
 h1 {
-  @apply font-bold mb-2 pb-1 border-b border-neutral-700 text-xl;
+  @apply font-bold mb-2 pb-1 border-b dark:border-neutral-700 border-neutral-400 text-xl;
 }
 
 h2 {
-  @apply font-bold mb-2 pb-1 pt-2 border-b border-neutral-700 text-lg;
+  @apply font-bold mb-2 pb-1 pt-2 border-b dark:border-neutral-700 border-neutral-400 text-lg;
 }
 
 h3 {
@@ -29,11 +29,11 @@ h3 {
 }
 
 main {
-  @apply flex flex-col gap-5 p-5 my-1 rounded-lg bg-neutral-900/50 border border-neutral-700;
+  @apply flex flex-col gap-5 p-5 my-1 rounded-lg dark:bg-neutral-900/50 bg-neutral-200 border dark:border-neutral-700 border-neutral-400;
 }
 
 a {
-  @apply text-blue-300 underline;
+  @apply dark:text-blue-300 text-blue-500 underline;
 }
 
 p {

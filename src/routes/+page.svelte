@@ -27,31 +27,37 @@
       Some technologies I'm familiar with: <br />
       <span class="grid grid-cols-7 md:flex gap-2">
         <a href="https://docker.com" target="_blank">
-          <DockerLogo class="w-10 h-10 fill-neutral-200" />
+          <DockerLogo
+            class="w-10 h-10 dark:fill-neutral-200 fill-neutral-700"
+          />
         </a>
         <a href="https://git-scm.com/" target="_blank">
-          <GitLogo class="w-10 h-10 fill-neutral-200" />
+          <GitLogo class="w-10 h-10 dark:fill-neutral-200 fill-neutral-700" />
         </a>
         <a href="https://nextjs.org/" target="_blank">
-          <NextLogo class="w-10 h-10 fill-neutral-200" />
+          <NextLogo class="w-10 h-10 dark:fill-neutral-200 fill-neutral-700" />
         </a>
         <a href="https://nodejs.org" target="_blank">
-          <NodeLogo class="w-10 h-10 fill-neutral-200" />
+          <NodeLogo class="w-10 h-10 dark:fill-neutral-200 fill-neutral-700" />
         </a>
         <a href="https://react.dev/" target="_blank">
-          <ReactLogo class="w-8 h-8 fill-neutral-200" />
+          <ReactLogo class="w-8 h-8 dark:fill-neutral-200 fill-neutral-700" />
         </a>
         <a href="https://tailwindcss.com" target="_blank">
-          <TailwindLogo class="w-10 h-10 fill-neutral-200" />
+          <TailwindLogo
+            class="w-10 h-10 dark:fill-neutral-200 fill-neutral-700"
+          />
         </a>
         <a href="https://typescriptlang.org/" target="_blank">
-          <TypescriptLogo class="w-10 h-10 text-neutral-200" />
+          <TypescriptLogo
+            class="w-10 h-10 dark:text-neutral-200 text-neutral-700"
+          />
         </a>
         <a href="https://kit.svelte.dev/" target="_blank">
-          <SvelteLogo class="w-8 h-8 fill-neutral-200" />
+          <SvelteLogo class="w-8 h-8 dark:fill-neutral-200 fill-neutral-700" />
         </a>
         <a href="https://vuejs.org/" target="_blank">
-          <VueLogo class="w-8 h-8 fill-neutral-200" />
+          <VueLogo class="w-8 h-8 dark:fill-neutral-200 fill-neutral-700" />
         </a>
       </span>
     </p>

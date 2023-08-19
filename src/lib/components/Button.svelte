@@ -5,11 +5,13 @@
   let generatedStyle = "";
 
   $: style === "side"
-    ? (generatedStyle = `active:text-neutral-500 hover:text-neutral-300 duration-200 flex gap-1 lg:mx-0 mx-auto items-center ${
-        active ? "text-neutral-100" : "text-neutral-400"
+    ? (generatedStyle = `dark:active:text-neutral-500 dark:hover:text-neutral-300 hover:text-neutral-800 duration-200 flex gap-1 lg:mx-0 mx-auto items-center ${
+        active
+          ? "dark:text-neutral-100 text-neutral-950"
+          : "dark:text-neutral-400 text-neutral-500"
       }`)
     : (generatedStyle =
-        "px-2 py-1 rounded-lg border border-neutral-700 bg-neutral-800 active:bg-neutral-900/50 hover:bg-neutral-700 w-full duration-200");
+        "px-2 py-1 rounded-lg border dark:border-neutral-700 border-neutral-400 dark:bg-neutral-800 active:bg-neutral-900/50 hover:bg-neutral-300 dark:hover:bg-neutral-700 w-full duration-200");
 </script>
 
 <button

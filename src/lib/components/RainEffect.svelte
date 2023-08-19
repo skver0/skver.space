@@ -1,17 +1,24 @@
 <script lang="ts">
+  import { darkModeStore } from "$lib/stores/DarkModeStore";
   import { onDestroy, onMount } from "svelte";
+  import { get } from "svelte/store";
   let canvas: HTMLCanvasElement;
   let ctx: CanvasRenderingContext2D | null = null;
   const raindrops: any[] = [];
 
   const raindropWidth = 2;
   const raindropHeight = 10;
-  const raindropColor = "#404040";
+  let raindropColor = "#AABBFF";
 
   let isSnowing = false;
 
   let raindropSpeed = isSnowing ? 2 : 10;
   let maxRaindrops = isSnowing ? 1000 : 200;
+
+  darkModeStore.subscribe((value) => {
+    if (value) raindropColor = "#404040";
+    else raindropColor = "#AABBFF";
+  });
 
   onMount(() => {
     init();
