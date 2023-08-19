@@ -26,7 +26,7 @@
   <p class="text-neutral-500 text-base">{data.metadata.description}</p>
   <Button
     style="side"
-    class="flex items-center gap-2 mx-0"
+    class="flex items-center gap-2"
     on:click={() => goto("blog" + data.path)}
   >
     Read more <span class="material-symbols-outlined">arrow_right_alt</span>
