@@ -3,11 +3,15 @@
   let canvas: HTMLCanvasElement;
   let ctx: CanvasRenderingContext2D | null = null;
   const raindrops: any[] = [];
-  const maxRaindrops = 200;
-  const raindropSpeed = 10;
+
   const raindropWidth = 2;
   const raindropHeight = 10;
   const raindropColor = "#404040";
+
+  let isSnowing = false;
+
+  let raindropSpeed = isSnowing ? 2 : 10;
+  let maxRaindrops = isSnowing ? 1000 : 200;
 
   onMount(() => {
     init();
@@ -39,7 +43,13 @@
     ctx!.fillStyle = raindropColor;
 
     raindrops.forEach((raindrop, i) => {
-      ctx!.fillRect(raindrop.x, raindrop.y, raindropWidth, raindropHeight);
+      if (!isSnowing)
+        ctx!.fillRect(raindrop.x, raindrop.y, raindropWidth, raindropHeight);
+      else {
+        ctx!.beginPath();
+        ctx!.arc(raindrop.x, raindrop.y, 5, 0, 2 * Math.PI);
+        ctx!.fill();
+      }
       raindrop.y += raindropSpeed;
 
       if (raindrop.y > canvas.height) raindrops.splice(i, 1);
