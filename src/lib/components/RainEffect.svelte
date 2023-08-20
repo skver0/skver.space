@@ -1,7 +1,7 @@
 <script lang="ts">
   import { darkModeStore } from "$lib/stores/DarkModeStore";
   import { onDestroy, onMount } from "svelte";
-  import { get } from "svelte/store";
+
   let canvas: HTMLCanvasElement;
   let ctx: CanvasRenderingContext2D | null = null;
   const raindrops: any[] = [];
@@ -9,8 +9,8 @@
   const raindropWidth = 2;
   const raindropHeight = 10;
   let raindropColor = "#AABBFF";
-
-  let isSnowing = false;
+  let currentMonth = new Date().getMonth();
+  let isSnowing = currentMonth == 11 || currentMonth == 0 || currentMonth == 1;
 
   let raindropSpeed = isSnowing ? 2 : 10;
   let maxRaindrops = isSnowing ? 1000 : 200;
