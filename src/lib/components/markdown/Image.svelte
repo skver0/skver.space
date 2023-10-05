@@ -8,7 +8,7 @@
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 <img
-  class="cursor-pointer"
+  class="cursor-pointer max-w-[30vw] mx-auto"
   src={image}
   {alt}
   on:click={() => modals.push(ImageViewerModal, { images: [image] })}

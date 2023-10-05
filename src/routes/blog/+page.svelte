@@ -34,7 +34,13 @@
         entries = [...entries, { path: p, metadata: metadata as Metadata }];
       })
     );
-    entries.reverse();
+
+    entries.sort(
+      (a, b) =>
+        new Date(b.metadata.date).getTime() -
+        new Date(a.metadata.date).getTime()
+    );
+
     allEntries = entries;
 
     filterByHash();
