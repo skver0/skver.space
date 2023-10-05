@@ -1,5 +1,4 @@
 name: build, deploy and restart service
-
 on:
   push:
     branches:
