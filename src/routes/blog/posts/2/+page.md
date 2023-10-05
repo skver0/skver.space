@@ -47,7 +47,7 @@ I've tried flashing the image with Etcher, but it didn't work since electron 18 
 MinUI is awesome! It's another custom firmware, but it's quite different from GarlicOS. It's meant to be installed on the original SD card, but the folder structure is quite different from the stock firmware, so I had to move some files around to make it work.
 Probably the most polished custom firmware I've tried, and it runs quite well.
 
-There's also custom apps for it, like a file manager, and a screenshot daemon, which is quite nice. But I tried getting prdoom_libretro to work, but it didn't work, I also tried getting tyrquake to work, but it didn't work either. I couldn't debug it since it doesn't show any error messages, and I couldn't find anything in the logs either. You can also use a terminal emulator, but it's quite small, and it's not really usable.
+There's also custom apps for it, like a file manager, and a screenshot daemon, which is quite nice. I tried getting prdoom to work, but it didn't work, I also tried getting tyrquake to work, but it didn't work either. I couldn't debug it since it doesn't show any error messages, and I couldn't find anything in the logs either. The error was something regarding an invalid pointer. Oh and there's also a terminal emulator, but it's quite small, and it's not really usable.
 
 <Image image="./2/ChronoTrigger.jpg" alt="An image of the console running ChronoTrigger on MinUI" />
 
