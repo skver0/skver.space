@@ -1,0 +1,24 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: home
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag skverspace:latest
+    - name: Publish to Docker Registry
+      uses: Cschau0701vip/CompositeAction@v2
+      with:
+        registry_username: skver
+        # Password of the Docker registry
+        registry_password: $DOCKER_LOGIN_PW
+        # Name of the Docker image to push
+        image_name: skverspace
+          
