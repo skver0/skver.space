@@ -25,4 +25,9 @@ jobs:
         file: Dockerfile
         push: true
         tags: registry.skver.space/skverspace:latest
-
+    - name: pain
+      run: |
+           ssh root@192.168.0.104 << 'EOF'
+            k3s kubectl -n ix-skver-space scale --replicas 0 deploy skver-space-ix-chart || true
+            k3s kubectl -n ix-skver-space scale --replicas 1 deploy skver-space-ix-chart  || true
+           EOF
