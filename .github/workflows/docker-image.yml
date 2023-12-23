@@ -10,15 +10,11 @@ jobs:
   build:
     runs-on: self-hosted
     steps:
-    - uses: actions/checkout@v3
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag skverspace:latest
-    - name: Publish to Docker Registry
-      uses: Cschau0701vip/CompositeAction@v2
+    - name: Kaniko builder
+      uses: aevea/action-kaniko@v0.10.0
       with:
-        registry_username: skver
-        # Password of the Docker registry
-        registry_password: $DOCKER_LOGIN_PW
-        # Name of the Docker image to push
-        image_name: skverspace
-          
+        registry: registry.skver.space
+        username: skver
+        password: $DOCKER_LOGIN_PW
+        image: skverspace
+        tag: latest
