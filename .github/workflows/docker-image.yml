@@ -11,14 +11,10 @@ jobs:
     runs-on: self-hosted
     steps:
     - uses: actions/checkout@v3
-
-    - name: Buildah Action
-      uses: redhat-actions/buildah-build@v2.12
+    - name: Build and push Docker images
+      uses: docker/build-push-action@v5.1.0
       with:
-        image: skverspace
-        tags: latest
-        containerfiles: |
-          ./Dockerfile
-
-
-
+        context: .
+        file: Dockerfile
+        push: true
+        tags: registry.skver.space/skverspace:latest
