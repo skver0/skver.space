@@ -11,6 +11,13 @@ jobs:
     runs-on: self-hosted
     steps:
     - uses: actions/checkout@v3
+    - name: Login to Container Registry
+      uses: docker/login-action@v1
+      with:
+        registry: registry.skver.space
+        username: skver
+        password: ${{ secrets.DOCKER_LOGIN_PW }}
+        
     - name: Build and push Docker images
       uses: docker/build-push-action@v5.1.0
       with:
@@ -18,5 +25,4 @@ jobs:
         file: Dockerfile
         push: true
         tags: registry.skver.space/skverspace:latest
-        username: skver
-        password: ${{ secrets.DOCKER_LOGIN_PW }}
+
