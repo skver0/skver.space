@@ -10,20 +10,15 @@ jobs:
   build:
     runs-on: self-hosted
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+    - uses: actions/checkout@v3
 
-    - name: Setup Crane
-      uses: imjasonh/setup-crane@v0.1
-
-    - name: Build Docker image with Crane
-      run: |
-        crane build -t your-image-name:tag -f path/to/Dockerfile .
-
-    - name: Push Docker image
-      run: |
-        crane push your-image-name:tag docker://your-registry/your-image-name:tag
-
+    - name: Buildah Action
+      uses: redhat-actions/buildah-build@v2
+      with:
+        image: skverspace
+        tags: latest
+        containerfiles: |
+          ./Dockerfile
 
 
 
