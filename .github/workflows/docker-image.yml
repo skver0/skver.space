@@ -10,14 +10,20 @@ jobs:
   build:
     runs-on: self-hosted
     steps:
-      - name: Build docker image
-      - uses: actions/setup-go@v2
-        with:
-          go-version: 1.15
-      - uses: actions/checkout@v2
+    - name: Checkout code
+      uses: actions/checkout@v2
 
-      - uses: imjasonh/setup-crane@v0.1
-      - run: |
-         crane build -t skverspace:latest -f path/to/Dockerfile .
+    - name: Setup Crane
+      uses: imjasonh/setup-crane@v0.1
+
+    - name: Build Docker image with Crane
+      run: |
+        crane build -t your-image-name:tag -f path/to/Dockerfile .
+
+    - name: Push Docker image
+      run: |
+        crane push your-image-name:tag docker://your-registry/your-image-name:tag
+
+
 
 
