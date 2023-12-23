@@ -10,11 +10,15 @@ jobs:
   build:
     runs-on: self-hosted
     steps:
-    - name: Kaniko builder
-      uses: aevea/action-kaniko@v0.10.0
-      with:
-        registry: registry.skver.space
-        username: skver
-        password: $DOCKER_LOGIN_PW
-        image: skverspace
-        tag: latest
+      - name: Checkout code
+        uses: actions/checkout@v2
+        
+      - name: Install nerdctl
+        run: |
+          wget -O nerdctl-1.7.2-linux-amd64.tar.gz https://github.com/containerd/nerdctl/releases/download/v1.7.2/nerdctl-full-1.7.2-linux-amd64.tar.gz
+          tar Cxzvvf /usr/local/bin nerdctl-1.7.2-linux-amd64.tar.gz
+
+      - name: Build Docker image with nerdctl
+        run: |
+          nerdctl build -f path/to/Dockerfile -t your-image-name:tag .
+
