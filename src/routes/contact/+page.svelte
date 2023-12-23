@@ -5,7 +5,7 @@
       You can contact me via email at <a href="mailto:skver@tuta.io"
         >skver@tuta.io</a
       >
-      or on Discord @skver.
+      or on Discord @skver!
     </p>
     <h2>Other links</h2>
     <ul>
