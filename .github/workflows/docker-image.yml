@@ -18,3 +18,5 @@ jobs:
         file: Dockerfile
         push: true
         tags: registry.skver.space/skverspace:latest
+        username: skver
+        password: ${{ secrets.DOCKER_LOGIN_PW }}
