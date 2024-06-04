@@ -8,6 +8,20 @@
   import NextLogo from "$lib/assets/logos/Nextjs-logo.svg?component";
   import ReactLogo from "$lib/assets/logos/React-icon.svg?component";
   import VueLogo from "$lib/assets/logos/Vue.js_Logo_2.svg?component";
+
+  const getAge = (dateString: string) => {
+    var today = new Date();
+    var birthDate = new Date(dateString);
+    var age = today.getFullYear() - birthDate.getFullYear();
+    var m = today.getMonth() - birthDate.getMonth();
+
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+    }
+
+    return age;
+}
+
 </script>
 
 <main>
@@ -15,7 +29,7 @@
   <article>
     <p>Hello! My name is <b>Károly Sárdi</b>, also known as <b>skver</b>.</p>
     <p>
-      I'm a 20 years old student from Hungary, currently studying at the <br /> Eötvös
+      I'm a {getAge("2003-02-25")} years old student from Hungary, currently studying at the <br /> Eötvös
       Loránd University, Faculty of Informatics.
     </p>
     <p>
