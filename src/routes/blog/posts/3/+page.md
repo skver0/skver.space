@@ -38,7 +38,7 @@ Be sure to grab [wlutool](http://blog.livedoor.jp/blackwingcat/archives/1995327.
 
 ## Real hardware
 
-I was wondering if I could get it working on my old AMD FX system, firstly Qashqai's ISO didn't work, so I've added [these] "Windows XP" drivers, which works quite well on my ASUS M5A97 Evo R2.0 board with the AMD 970 chipset.
+I was wondering if I could get it working on my old AMD FX system, firstly Qashqai's ISO didn't work, so I've added [these](https://winraid.level1techs.com/t/guide-integration-of-amds-ahci-raid-drivers-into-a-winxp-w2k3-cd/32098) "Windows XP" drivers, which works quite well on my ASUS M5A97 Evo R2.0 board with the AMD 970 chipset.
 
 Since I put the GTX 750 into the system this install also needed [BlackWingCat's Extended Core](https://win2k.org/blog/2010/12/02/1299806/), which was below the Extended Kernel install files. Oh here's BlackWingCat's [nvidia driver](https://win2k.org/blog/2010/03/13/1114373/) too.
 
